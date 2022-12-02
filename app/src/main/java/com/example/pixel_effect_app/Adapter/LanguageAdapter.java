@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pixel_effect_app.Activity.MainActivity5;
+import com.example.pixel_effect_app.Activity.ImageEdit_Activity;
 import com.example.pixel_effect_app.R;
 import com.example.pixel_effect_app.modal.LanguageData;
 
@@ -19,7 +19,7 @@ import java.util.List;
 public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.LangugaeHolder> {
     Activity activity;
     List<LanguageData> dataList;
-    public LanguageAdapter(MainActivity5 mainActivity5, List<LanguageData> dataList) {
+    public LanguageAdapter(ImageEdit_Activity mainActivity5, List<LanguageData> dataList) {
 
         activity = mainActivity5;
         this.dataList = dataList;
@@ -37,7 +37,7 @@ public class LanguageAdapter extends RecyclerView.Adapter<LanguageAdapter.Langug
         holder.logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity5.front_img.setImageResource(dataList.get(position).img);
+                ImageEdit_Activity.front_img.setImageResource(dataList.get(position).img);
             }
         });
     }

@@ -11,10 +11,9 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pixel_effect_app.Activity.MainActivity5;
+import com.example.pixel_effect_app.Activity.ImageEdit_Activity;
 import com.example.pixel_effect_app.R;
 import com.example.pixel_effect_app.modal.EffectData;
-import com.example.pixel_effect_app.modal.LanguageData;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class EffectAdapter extends RecyclerView.Adapter<EffectAdapter.EffectHold
     Activity activity;
     List<EffectData> effectData;
 
-    public EffectAdapter(MainActivity5 positionMainActivity5, List<EffectData> effectData) {
+    public EffectAdapter(ImageEdit_Activity positionMainActivity5, List<EffectData> effectData) {
 
         activity = positionMainActivity5;
         this.effectData = effectData;
@@ -41,7 +40,7 @@ public class EffectAdapter extends RecyclerView.Adapter<EffectAdapter.EffectHold
         holder.Effect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity5.front_img.setImageResource(effectData.get(position).images_Effect);
+                ImageEdit_Activity.front_img.setImageResource(effectData.get(position).images_Effect);
             }
         });
     }

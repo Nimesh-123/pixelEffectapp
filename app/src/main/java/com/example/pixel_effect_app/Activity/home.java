@@ -10,20 +10,20 @@ import android.view.animation.AnimationUtils;
 
 import com.example.pixel_effect_app.R;
 
-public class MainActivity extends AppCompatActivity {
+public class home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.home);
 
-        Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.layout);
+        Animation animation = AnimationUtils.loadAnimation(home.this, R.anim.layout);
         findViewById(R.id.textView).setAnimation(animation);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent homeIntent = new Intent(MainActivity.this, MainActivity2.class);
+                Intent homeIntent = new Intent(home.this, Start_Activity.class);
                 startActivity(homeIntent);
                 finish();
 

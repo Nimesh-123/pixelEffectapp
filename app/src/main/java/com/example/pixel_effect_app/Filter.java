@@ -1,4 +1,4 @@
-package com.example.pixel_effect_app.Adapter;
+package com.example.pixel_effect_app;
 
 import android.graphics.ColorFilter;
 import android.graphics.ColorMatrix;

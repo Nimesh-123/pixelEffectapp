@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.example.pixel_effect_app.BuildConfig;
 import com.example.pixel_effect_app.R;
 
-public class MainActivity2 extends AppCompatActivity {
+public class Start_Activity extends AppCompatActivity {
     ImageView ImageView, imageView4, imageView2, dot;
 
     public static Uri uri;
@@ -23,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.start_activity);
 
         imageView2 = findViewById(R.id.imageView2);
         imageView4 = findViewById(R.id.imageView4);
@@ -34,7 +34,7 @@ public class MainActivity2 extends AppCompatActivity {
         imageView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity4.class);
+                Intent intent = new Intent(Start_Activity.this, crop_Activity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                Intent intent = new Intent(Start_Activity.this, Creation.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                PopupMenu menu = new PopupMenu(MainActivity2.this, dot);
+                PopupMenu menu = new PopupMenu(Start_Activity.this, dot);
                 menu.getMenuInflater().inflate(R.menu.option_menu, menu.getMenu());
 
                 menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -63,7 +63,7 @@ public class MainActivity2 extends AppCompatActivity {
                         switch (menuItem.getItemId()) {
 
                             case R.id.Rate:
-                                Toast.makeText(MainActivity2.this, "Rate", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Start_Activity.this, "Rate", Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.share:
@@ -78,11 +78,11 @@ public class MainActivity2 extends AppCompatActivity {
                                 break;
 
                             case R.id.more:
-                                Toast.makeText(MainActivity2.this, "more", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Start_Activity.this, "more", Toast.LENGTH_SHORT).show();
                                 break;
 
                             case R.id.police:
-                                Toast.makeText(MainActivity2.this, "police", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Start_Activity.this, "police", Toast.LENGTH_SHORT).show();
                         }
                         return false;
                     }
@@ -108,7 +108,7 @@ public class MainActivity2 extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
             if (requestCode == 1001) {
                 uri = data.getData();
-                Intent intent1 = new Intent(MainActivity2.this, MainActivity4.class);
+                Intent intent1 = new Intent(Start_Activity.this, crop_Activity.class);
                 startActivity(intent1);
             }
         }

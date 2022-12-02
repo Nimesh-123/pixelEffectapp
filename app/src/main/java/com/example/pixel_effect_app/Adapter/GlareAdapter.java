@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pixel_effect_app.Activity.MainActivity5;
+import com.example.pixel_effect_app.Activity.ImageEdit_Activity;
 import com.example.pixel_effect_app.R;
 import com.example.pixel_effect_app.modal.GlareData;
 
@@ -20,7 +20,7 @@ import java.util.List;
 public class GlareAdapter extends RecyclerView.Adapter<GlareAdapter.Glareholder> {
     Activity activity;
     List<GlareData> glareData;
-    public <position> GlareAdapter(MainActivity5 positionMainActivity5, List<GlareData> glareData) {
+    public <position> GlareAdapter(ImageEdit_Activity positionMainActivity5, List<GlareData> glareData) {
 
         activity = positionMainActivity5;
         this.glareData = glareData;
@@ -38,7 +38,7 @@ public class GlareAdapter extends RecyclerView.Adapter<GlareAdapter.Glareholder>
         holder.Glare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MainActivity5.front_img.setImageResource(glareData.get(position).imges_Glare);
+                ImageEdit_Activity.front_img.setImageResource(glareData.get(position).imges_Glare);
             }
         });
     }

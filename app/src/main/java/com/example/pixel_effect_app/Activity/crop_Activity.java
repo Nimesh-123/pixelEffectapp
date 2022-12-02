@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.canhub.cropper.CropImageView;
 import com.example.pixel_effect_app.R;
 
-public class MainActivity4 extends AppCompatActivity {
+public class crop_Activity extends AppCompatActivity {
     CropImageView imagecrop;
     ImageView images;
 
@@ -20,14 +20,14 @@ public class MainActivity4 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
+        setContentView(R.layout.crop_activity);
 
 
         imagecrop = findViewById(R.id.imagecrop);
         images = findViewById(R.id.images);
 
 
-        imagecrop.setImageUriAsync(MainActivity2.uri);
+        imagecrop.setImageUriAsync(Start_Activity.uri);
 
         images.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class MainActivity4 extends AppCompatActivity {
 
                 bitmap = imagecrop.getCroppedImage();
 
-                Intent intent = new Intent(MainActivity4.this, MainActivity5.class);
+                Intent intent = new Intent(crop_Activity.this, ImageEdit_Activity.class);
                 startActivity(intent);
 
 

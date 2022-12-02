@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.MainActivity5">
+    tools:context=".Activity.ImageEdit_Activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -93,8 +93,6 @@
 
     </LinearLayout>
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -142,6 +140,55 @@
             android:visibility="gone" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5C5A5A">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Filter_Data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/la"
+            android:layout_marginBottom="0dp"
+            android:background="#5C5A5A"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5C5A5A">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Sticker_Data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/la"
+            android:layout_marginBottom="0dp"
+            android:background="#5C5A5A"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5C5A5A">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Text_Data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/la"
+            android:layout_marginBottom="0dp"
+            android:background="#5C5A5A"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/la"
@@ -266,22 +313,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#5C5A5A">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/Filter_Data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/la"
-                        android:layout_marginBottom="0dp"
-                        android:background="#5C5A5A"
-                        android:visibility="gone" />
-
-                </LinearLayout>
-
-                <LinearLayout
                     android:id="@+id/Filter_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -290,7 +321,7 @@
 
 
                     <ImageView
-                        android:layout_width="11dp"
+                        android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/icon_edit"
                         tools:ignore="MissingConstraints" />
@@ -307,6 +338,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/text_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -332,6 +364,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/Sticker_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"

@@ -8,14 +8,14 @@ import android.widget.ImageView;
 
 import com.example.pixel_effect_app.R;
 
-public class MainActivity6 extends AppCompatActivity {
+public class Share_Activity extends AppCompatActivity {
 
     ImageView bake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.share_activity);
 
 
         bake = findViewById(R.id.bake);
